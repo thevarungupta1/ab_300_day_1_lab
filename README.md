@@ -309,3 +309,10 @@ def load_documents(data_dir= "data"):
         
     return documents
 ```
+
+### Step 13: Create retriver 
+`src/simple_retriver.py`
+
+```python
+
+```
