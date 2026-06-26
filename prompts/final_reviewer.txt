@@ -13,4 +13,4 @@ Return:
 Execution Summary:
 Critical Risks:
 Recommanded Changes:
-Approval Status.
+Approval Status: as REJECTED / APPROVED
