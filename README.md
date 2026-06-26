@@ -427,6 +427,11 @@ Final Decision:
 
 ```python
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.foundry_client import ask_ai
 from src.trace_logger import log_trace
@@ -439,7 +444,7 @@ def main():
     Users can view invoices, download PDFs and make payments.    
     """
     
-    system_prompt = Path("../prompts/agentic_reviewer.txt").read_text(encoding="utf-8")
+    system_prompt = Path("prompts/agentic_reviewer.txt").read_text(encoding="utf-8")
     
     log_trace(module, "ArchitectureAgent", "Input recived", "SUCCESS", proposal)
     
@@ -453,15 +458,92 @@ def main():
     
     print("\n======Agentic AI Demo=======\n")
     print(answer)
-        
     
-    
+if __name__ == "__main__":
+    main()
 ```
 
 ```bash
 cd modules
-python 01_agentic_ai.py
+python modules/01_agentic_ai.py
 ```
 
 
 ### Deploy model in azure foundary and update key and endpoint
+
+
+------
+
+# Exercise 2: Multi-Agent Atchitecture
+
+### Business User Case:
+Before production release, enterprise design must be reviewed by architecture, security and compliance teams
+
+
+### Purpose:
+Demonstate multiple specilaized agents working together
+
+
+### Create Prompts for each agents
+
+`prompts/security_agent.txt`
+```
+You are a Senior Security Agent.
+
+Review the proposed Solution for:
+- Authentication
+- Authorization
+- Secret management
+- Data protection
+- API security
+- Audit logging
+- Compliance risk
+
+Return security issues and recommendations.
+```
+
+`prompts/compliance_agent.txt`
+```
+You are Compliance Agent.
+
+Review the Solution for.
+- Customer data handling
+- Policy violations
+- Audit requirements
+- Data retention
+- Enterprise governance
+
+Return compliance risks and manadatory controls.
+```
+
+`prompts/final_reviewer.txt`
+```
+
+```
+
+### Create main file 
+`modules/02_multi_agent.py`
+
+```python
+You are the Final Enterprise AI Reviewer.
+
+You will receive feedback from multiple agents
+
+You task:
+1. Consolidate all feedback.
+2. Remove duplication.
+3. Prioritize risks.
+4. Give final approval decision.
+
+Return:
+
+Execution Summary:
+Critical Risks:
+Recommanded Changes:
+Approval Status.
+```
+
+### Test the app
+```bash
+python modules/02_multi_agent.py
+```
