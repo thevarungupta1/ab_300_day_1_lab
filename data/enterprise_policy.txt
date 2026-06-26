@@ -1,0 +1,4 @@
+Enterprise applications must follow secure design principles
+Customer data must not be stored in personal storage.
+Any system handling sensitive data must include audit logging, encryption, RBAC, and data retention rule.
+Production workloads must have monitoring, alerting, backup and disaster recovery strategy.

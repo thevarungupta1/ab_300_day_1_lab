@@ -1,0 +1,4 @@
+Enterprise applications should use layered architecture or clean archotecture.
+Business logic should be placed directly in controllers.
+Systems should be designed for scalability, obervability, maintainability, and failure handling.
+For distributed systems, retry, circuit breaker, timeout, and idempatency should be considered

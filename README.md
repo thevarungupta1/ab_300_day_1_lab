@@ -260,3 +260,33 @@ def ask_ai(
     
     return answer
 ```
+
+### Step 11: Data Files
+
+`data/enterprise_policy.txt`
+
+```
+Enterprise applications must follow secure design principles
+Customer data must not be stored in personal storage.
+Any system handling sensitive data must include audit logging, encryption, RBAC, and data retention rule.
+Production workloads must have monitoring, alerting, backup and disaster recovery strategy.
+```
+
+`data/security_guidelines.txt`
+
+```
+APP APIs must be use authentication and authorization.
+JWT tokens must be short lived.
+Secrets must be stored in Azure Key Vault.
+Sensitive data must be encrypted in transit and at rest.
+Public APIs must be rate limiting and request validation.
+```
+
+`data/architecture_standards.txt`
+
+```
+Enterprise applications should use layered architecture or clean archotecture.
+Business logic should be placed directly in controllers.
+Systems should be designed for scalability, obervability, maintainability, and failure handling.
+For distributed systems, retry, circuit breaker, timeout, and idempatency should be considered
+```

@@ -1,0 +1,5 @@
+APP APIs must be use authentication and authorization.
+JWT tokens must be short lived.
+Secrets must be stored in Azure Key Vault.
+Sensitive data must be encrypted in transit and at rest.
+Public APIs must be rate limiting and request validation.
