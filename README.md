@@ -624,3 +624,14 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+
+-----
+
+# Exercise 4: Memory and reasining
+
+### Business Use case:
+Architecture review should remeber that the same project already had a risk related to missing audit logs
+
+### Purpose
+How and agent remembers previor decision
