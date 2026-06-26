@@ -1,0 +1,5 @@
+timestamp,module,agent,step,status,details
+2026-06-26 13:58:44.841604,01_agentic_ai,ArchitectureAgent,Input recived,SUCCESS,"
+    We are building a customer invoice portal using Python FastAPI backend, React frontend, PostgresSQL database, and Azure App Service. 
+    Users can view invoices, download PDFs and make payments.    
+    "
