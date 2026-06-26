@@ -290,3 +290,22 @@ Business logic should be placed directly in controllers.
 Systems should be designed for scalability, obervability, maintainability, and failure handling.
 For distributed systems, retry, circuit breaker, timeout, and idempatency should be considered
 ```
+
+
+### Step 12: Create document loader
+`src/document_loader.py`
+
+```python
+from pathlib import Path
+
+def load_documents(data_dir= "data"):
+    documents = []
+    
+    for file_path in Path(data_dir).glob("*.txt"):
+        documents.append({
+            "file_name": file_path.name,
+            "content": file_path.read_text(encoding="utf-8")
+        })
+        
+    return documents
+```
