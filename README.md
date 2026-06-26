@@ -381,3 +381,21 @@ def build_enterprise_context(role, task, business_context, constraints, examples
     return context.strip()
 ```
 
+
+------
+# Exercise 1: Agentic AI 
+
+### Business Use case:
+Enterprise architecture team wants an AI Agent to review applicationm design before technical approcal.
+
+### Purpose:
+Demonstarte how an AI Agent is diffeernt from nomal prompt
+A normal LLM answer a question
+An agent has
+- Goal
+- Role
+- Task
+- Decision logic
+- Output format
+- Trace
+
